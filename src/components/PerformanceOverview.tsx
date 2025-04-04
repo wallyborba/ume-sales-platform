@@ -1,5 +1,6 @@
 
-import { Users, DollarSign } from "lucide-react";
+import { Users, DollarSign, Info } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface PerformanceOverviewProps {
   clientCount: number;
@@ -26,9 +27,18 @@ const PerformanceOverview = ({ clientCount, earnings }: PerformanceOverviewProps
               <div className="text-3xl font-bold">{clientCount}</div>
               <div className="text-gray-600 text-sm mt-1">Total de Clientes</div>
             </div>
-            <div className="bg-blue-100 p-2 rounded-full">
-              <Users size={20} className="text-blue-600" />
-            </div>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button className="text-gray-400">
+                    <Info size={18} />
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Total number of clients in your portfolio</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
         </div>
         
@@ -38,9 +48,18 @@ const PerformanceOverview = ({ clientCount, earnings }: PerformanceOverviewProps
               <div className="text-3xl font-bold">{formattedEarnings}</div>
               <div className="text-gray-600 text-sm mt-1">Ganhos Mensais</div>
             </div>
-            <div className="bg-green-100 p-2 rounded-full">
-              <DollarSign size={20} className="text-green-600" />
-            </div>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button className="text-gray-400">
+                    <Info size={18} />
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Your monthly earnings from all clients</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
         </div>
       </div>
