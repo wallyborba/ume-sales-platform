@@ -14,7 +14,7 @@ const BottomNavBar = () => {
         className={`flex flex-col items-center justify-center w-1/2 py-2 ${isHome ? 'text-[#0D8754]' : 'text-u-gray'}`}
       >
         <User size={24} />
-        <span className="text-xs mt-1 font-medium">Consult Client</span>
+        <span className="text-xs mt-1 font-medium">Consultar Cliente</span>
       </Link>
       
       <Link 
@@ -22,7 +22,7 @@ const BottomNavBar = () => {
         className={`flex flex-col items-center justify-center w-1/2 py-2 ${isPortfolio ? 'text-[#0D8754]' : 'text-u-gray'}`}
       >
         <Users size={24} />
-        <span className="text-xs mt-1 font-medium">Client Portfolio</span>
+        <span className="text-xs mt-1 font-medium">Carteira de Clientes</span>
       </Link>
     </div>
   );

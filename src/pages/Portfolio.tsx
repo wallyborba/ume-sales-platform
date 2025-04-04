@@ -1,6 +1,8 @@
 
 import TopBar from "@/components/TopBar";
 import UserInfoCard from "@/components/UserInfoCard";
+import LevelProgressCard from "@/components/LevelProgressCard";
+import PerformanceSection from "@/components/PerformanceSection";
 import BottomNavBar from "@/components/BottomNavBar";
 
 const Portfolio = () => {
@@ -16,8 +18,16 @@ const Portfolio = () => {
       />
       
       <div className="px-4 py-4 flex-1">
-        <h1 className="text-xl font-bold mb-4">Client Portfolio</h1>
-        <p className="text-gray-600">This page will display your client portfolio.</p>
+        <h1 className="text-xl font-bold mb-4">Carteira de Clientes</h1>
+        
+        <LevelProgressCard 
+          level={3}
+          levelName="Engaged Seller"
+          progress={65}
+          nextLevel={4}
+        />
+        
+        <PerformanceSection />
       </div>
       
       <BottomNavBar />

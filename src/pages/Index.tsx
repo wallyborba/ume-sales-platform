@@ -1,9 +1,7 @@
 
 import TopBar from "@/components/TopBar";
 import UserInfoCard from "@/components/UserInfoCard";
-import LevelProgressCard from "@/components/LevelProgressCard";
 import ClientSearchCard from "@/components/ClientSearchCard";
-import PerformanceSection from "@/components/PerformanceSection";
 import BottomNavBar from "@/components/BottomNavBar";
 
 const Index = () => {
@@ -19,16 +17,7 @@ const Index = () => {
       />
       
       <div className="px-4 py-4 flex-1">
-        <LevelProgressCard 
-          level={3}
-          levelName="Engaged Seller"
-          progress={65}
-          nextLevel={4}
-        />
-        
         <ClientSearchCard />
-        
-        <PerformanceSection />
       </div>
       
       <BottomNavBar />

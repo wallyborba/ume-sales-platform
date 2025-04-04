@@ -29,7 +29,7 @@ const TopBar = () => {
                   className="block text-white border-l-4 border-u-green pl-4 py-2 font-medium"
                   onClick={toggleMenu}
                 >
-                  Consult Client
+                  Consultar Cliente
                 </Link>
               </li>
               <li>
@@ -38,7 +38,7 @@ const TopBar = () => {
                   className="block text-gray-300 hover:text-white pl-4 py-2 font-medium"
                   onClick={toggleMenu}
                 >
-                  Client Portfolio
+                  Carteira de Clientes
                 </Link>
               </li>
             </ul>
