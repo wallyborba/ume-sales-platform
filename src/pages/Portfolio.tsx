@@ -36,7 +36,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-u-light-gray pb-16">
+    <div className="min-h-screen flex flex-col bg-[#F3F7FA] pb-16">
       <TopBar />
       
       <UserInfoCard 

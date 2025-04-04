@@ -7,7 +7,7 @@ import BottomNavBar from "@/components/BottomNavBar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-u-light-gray pb-16">
+    <div className="min-h-screen flex flex-col bg-[#F3F7FA] pb-16">
       <TopBar />
       
       <UserInfoCard 
@@ -21,7 +21,7 @@ const Index = () => {
         <ClientSearchCard />
       </div>
       
-      <div className="bg-[#F3F7FA] px-4 py-4">
+      <div className="bg-[#F3F7FA] px-4 py-4 flex-1">
         <PerformanceSection />
       </div>
       
