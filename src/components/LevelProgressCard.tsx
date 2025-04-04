@@ -1,5 +1,5 @@
 
-import { Trophy, TrendingUp } from "lucide-react";
+import { Trophy } from "lucide-react";
 
 interface LevelProgressCardProps {
   level: number;
@@ -11,8 +11,6 @@ interface LevelProgressCardProps {
 const LevelProgressCard = ({ level, levelName, progress, nextLevel }: LevelProgressCardProps) => {
   return (
     <div className="bg-white rounded-lg p-4 shadow-sm mb-4">
-      <h2 className="text-gray-600 font-medium mb-2">Seu Nível</h2>
-      
       <div className="flex items-center mb-3">
         <div className="bg-u-yellow p-2 rounded-full mr-3">
           <Trophy size={20} className="text-white" />
@@ -31,12 +29,6 @@ const LevelProgressCard = ({ level, levelName, progress, nextLevel }: LevelProgr
             style={{ width: `${progress}%` }}
           ></div>
         </div>
-      </div>
-      
-      <div className="flex justify-end">
-        <button className="bg-u-yellow p-2 rounded-full">
-          <TrendingUp size={20} className="text-white" />
-        </button>
       </div>
     </div>
   );
