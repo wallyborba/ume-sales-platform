@@ -46,7 +46,7 @@ const Portfolio = () => {
         address="AV PIO XII"
       />
       
-      <div className="px-4 py-4 flex-1">
+      <div className="bg-white px-4 py-4">
         <h1 className="text-lg font-bold mb-4">Carteira de Clientes</h1>
         
         <LevelProgressCard 
@@ -55,14 +55,20 @@ const Portfolio = () => {
           progress={65}
           nextLevel={4}
         />
-        
+      </div>
+      
+      <div className="bg-[#F3F7FA] px-4 py-4">
         <PortfolioRules />
-        
+      </div>
+      
+      <div className="bg-white px-4 py-4">
         <PerformanceOverview 
           clientCount={127} 
           earnings={18450}
         />
-        
+      </div>
+      
+      <div className="bg-[#F3F7FA] px-4 py-4">
         <RecentActivity activities={recentActivities} />
       </div>
       
