@@ -4,10 +4,11 @@ import UserInfoCard from "@/components/UserInfoCard";
 import LevelProgressCard from "@/components/LevelProgressCard";
 import ClientSearchCard from "@/components/ClientSearchCard";
 import PerformanceSection from "@/components/PerformanceSection";
+import BottomNavBar from "@/components/BottomNavBar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-u-light-gray">
+    <div className="min-h-screen flex flex-col bg-u-light-gray pb-16">
       <TopBar />
       
       <UserInfoCard 
@@ -29,6 +30,8 @@ const Index = () => {
         
         <PerformanceSection />
       </div>
+      
+      <BottomNavBar />
     </div>
   );
 };
