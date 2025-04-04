@@ -9,10 +9,10 @@ const PerformanceSection = () => {
   const currentDate = new Date().toLocaleDateString('pt-BR');
   
   return (
-    <div className="bg-u-light-gray py-4">
-      <h2 className="text-lg font-bold mb-3">Seu desempenho</h2>
+    <div className="py-4">
+      <h2 className="text-lg font-bold mb-4">Seu desempenho</h2>
       
-      <div className="flex mb-2 gap-2">
+      <div className="flex mb-4 gap-2">
         <button 
           className={`px-4 py-2 rounded-full text-sm ${
             selectedPeriod === 'today' 
