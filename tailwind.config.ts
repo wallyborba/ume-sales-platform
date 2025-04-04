@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for the dashboard
+				"u-black": "#000000",
+				"u-green": "#00FF85", 
+				"u-gray": "#5D616D",
+				"u-light-gray": "#F1F1F5",
+				"u-yellow": "#FFB800",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

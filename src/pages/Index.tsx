@@ -1,11 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import TopBar from "@/components/TopBar";
+import UserInfoCard from "@/components/UserInfoCard";
+import LevelProgressCard from "@/components/LevelProgressCard";
+import ClientSearchCard from "@/components/ClientSearchCard";
+import PerformanceSection from "@/components/PerformanceSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen flex flex-col bg-u-light-gray">
+      <TopBar />
+      
+      <UserInfoCard 
+        username="Olá, BIG."
+        phone="(81) 9****-3134"
+        store="BIG LAR"
+        address="AV PIO XII"
+      />
+      
+      <div className="px-4 py-4 flex-1">
+        <LevelProgressCard 
+          level={3}
+          levelName="Engaged Seller"
+          progress={65}
+          nextLevel={4}
+        />
+        
+        <ClientSearchCard />
+        
+        <PerformanceSection />
       </div>
     </div>
   );
