@@ -4,9 +4,28 @@ import MetricCard from './MetricCard';
 
 type Period = 'today' | 'week' | 'month';
 
+// Mock data for different periods
+const mockData = {
+  today: {
+    clientsRegistered: 2,
+    paidSales: 1
+  },
+  week: {
+    clientsRegistered: 8,
+    paidSales: 6
+  },
+  month: {
+    clientsRegistered: 32,
+    paidSales: 25
+  }
+};
+
 const PerformanceSection = () => {
   const [selectedPeriod, setSelectedPeriod] = useState<Period>('today');
   const currentDate = new Date().toLocaleDateString('pt-BR');
+  
+  // Get the current data based on selected period
+  const currentData = mockData[selectedPeriod];
   
   return (
     <div>
@@ -49,12 +68,12 @@ const PerformanceSection = () => {
       
       <div className="flex gap-4">
         <MetricCard 
-          value={0} 
+          value={currentData.clientsRegistered} 
           label="Clientes cadastrados" 
           tooltip="Número de novos clientes cadastrados por você neste período. Cadastre mais clientes para aumentar sua carteira."
         />
         <MetricCard 
-          value={0} 
+          value={currentData.paidSales} 
           label="Vendas remuneradas" 
           tooltip="Quantidade de vendas que geraram comissões para você neste período. Mais vendas significam maiores ganhos."
         />
