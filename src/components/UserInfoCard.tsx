@@ -10,7 +10,7 @@ interface UserInfoCardProps {
 
 const UserInfoCard = ({ username, phone, store, address }: UserInfoCardProps) => {
   return (
-    <div className="bg-u-gray text-white p-4 flex justify-between items-center">
+    <div className="bg-[#72818C] text-white p-4 flex justify-between items-center">
       <div>
         <h2 className="text-lg font-bold">{username}</h2>
         <p className="text-sm opacity-80 mt-1">{phone}</p>

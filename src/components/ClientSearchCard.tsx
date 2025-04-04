@@ -12,7 +12,7 @@ const ClientSearchCard = () => {
   };
 
   return (
-    <div className="mb-4">
+    <div>
       <h2 className="text-lg font-bold mb-3">Consultar cliente</h2>
       <form onSubmit={handleSubmit} className="flex">
         <input

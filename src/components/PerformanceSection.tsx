@@ -9,7 +9,7 @@ const PerformanceSection = () => {
   const currentDate = new Date().toLocaleDateString('pt-BR');
   
   return (
-    <div className="py-4">
+    <div>
       <h2 className="text-lg font-bold mb-4">Seu desempenho</h2>
       
       <div className="flex mb-4 gap-2">

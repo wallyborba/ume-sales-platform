@@ -17,8 +17,11 @@ const Index = () => {
         address="AV PIO XII"
       />
       
-      <div className="px-4 py-4 flex-1">
+      <div className="bg-white px-4 py-4">
         <ClientSearchCard />
+      </div>
+      
+      <div className="bg-[#F3F7FA] px-4 py-4">
         <PerformanceSection />
       </div>
       
