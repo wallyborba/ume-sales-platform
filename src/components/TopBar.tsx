@@ -13,9 +13,11 @@ const TopBar = () => {
   return (
     <div className="bg-[#F3F7FA] h-14 flex items-center justify-between px-4 border-b border-[#C4D0D8]">
       <div className="flex items-center">
-        <span className="text-u-black font-bold text-2xl">u</span>
-        <span className="bg-u-green w-8 h-8"></span>
-        <span className="text-u-black font-bold text-2xl">me<span className="text-u-green">.</span></span>
+        <img 
+          src="/lovable-uploads/8fcc03ba-ba88-462b-b5ac-7414cdbeea24.png" 
+          alt="u.me logo" 
+          className="h-8"
+        />
       </div>
       
       <button className="text-u-gray" onClick={toggleMenu}>
