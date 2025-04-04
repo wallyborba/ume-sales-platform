@@ -11,12 +11,22 @@ const TopBar = () => {
   };
 
   return (
-    <div className="bg-u-black h-14 flex items-center justify-between px-4">
-      <button className="text-white" onClick={toggleMenu}>
-        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+    <div className="bg-[#F3F7FA] h-14 flex items-center justify-between px-4 border-b border-[#C4D0D8]">
+      <div className="flex items-center">
+        <span className="text-u-black font-bold text-2xl">u</span>
+        <span className="bg-u-green w-8 h-8"></span>
+        <span className="text-u-black font-bold text-2xl">me<span className="text-u-green">.</span></span>
+      </div>
+      
+      <button className="text-u-gray" onClick={toggleMenu}>
+        {isMenuOpen ? <X size={24} /> : (
+          <div className="flex flex-col space-y-1.5">
+            <div className="w-6 h-0.5 bg-gray-500"></div>
+            <div className="w-6 h-0.5 bg-gray-500"></div>
+            <div className="w-6 h-0.5 bg-gray-500"></div>
+          </div>
+        )}
       </button>
-      <div className="text-u-green font-bold text-xl">u.me</div>
-      <div className="w-6"></div> {/* Empty div for balance */}
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
