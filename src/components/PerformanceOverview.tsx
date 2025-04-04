@@ -17,7 +17,7 @@ const PerformanceOverview = ({ clientCount, earnings }: PerformanceOverviewProps
 
   return (
     <div>
-      <h2 className="text-lg font-bold mb-4">Seu Desempenho</h2>
+      <h2 className="text-lg font-bold mb-4">Sua Carteira</h2>
       
       <div className="flex gap-4">
         <div className="bg-white rounded-lg p-4 flex-1 shadow-sm">
