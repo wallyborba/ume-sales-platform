@@ -2,7 +2,8 @@
 import TopBar from "@/components/TopBar";
 import UserInfoCard from "@/components/UserInfoCard";
 import LevelProgressCard from "@/components/LevelProgressCard";
-import PerformanceSection from "@/components/PerformanceSection";
+import PortfolioRules from "@/components/PortfolioRules";
+import PerformanceOverview from "@/components/PerformanceOverview";
 import BottomNavBar from "@/components/BottomNavBar";
 
 const Portfolio = () => {
@@ -27,7 +28,12 @@ const Portfolio = () => {
           nextLevel={4}
         />
         
-        <PerformanceSection />
+        <PortfolioRules />
+        
+        <PerformanceOverview 
+          clientCount={127} 
+          earnings={18450}
+        />
       </div>
       
       <BottomNavBar />
