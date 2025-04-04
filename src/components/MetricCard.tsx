@@ -1,6 +1,10 @@
 
 import { Info } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { 
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 interface MetricCardProps {
   value: number;
@@ -17,18 +21,16 @@ const MetricCard = ({ value, label, tooltip }: MetricCardProps) => {
           <div className="text-gray-600 text-sm mt-1">{label}</div>
         </div>
         {tooltip && (
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button className="text-gray-400">
-                  <Info size={18} />
-                </button>
-              </TooltipTrigger>
-              <TooltipContent className="bg-white p-2 max-w-xs">
-                <p>{tooltip}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <Popover>
+            <PopoverTrigger asChild>
+              <button className="text-gray-400 hover:text-gray-600 transition-colors">
+                <Info size={18} />
+              </button>
+            </PopoverTrigger>
+            <PopoverContent className="bg-white p-3 max-w-xs shadow-md">
+              <p className="text-sm text-gray-700">{tooltip}</p>
+            </PopoverContent>
+          </Popover>
         )}
       </div>
     </div>
