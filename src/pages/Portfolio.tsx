@@ -47,7 +47,7 @@ const Portfolio = () => {
       />
       
       <div className="px-4 py-4 flex-1">
-        <h1 className="text-xl font-bold mb-4">Carteira de Clientes</h1>
+        <h1 className="text-lg font-bold mb-4">Carteira de Clientes</h1>
         
         <LevelProgressCard 
           level={3}
