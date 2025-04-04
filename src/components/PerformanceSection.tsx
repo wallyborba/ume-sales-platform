@@ -48,8 +48,16 @@ const PerformanceSection = () => {
       <div className="text-sm text-gray-600 mb-4">{currentDate}</div>
       
       <div className="flex gap-4">
-        <MetricCard value={0} label="Clientes cadastrados" />
-        <MetricCard value={0} label="Vendas remuneradas" />
+        <MetricCard 
+          value={0} 
+          label="Clientes cadastrados" 
+          tooltip="Número de novos clientes cadastrados por você neste período. Cadastre mais clientes para aumentar sua carteira."
+        />
+        <MetricCard 
+          value={0} 
+          label="Vendas remuneradas" 
+          tooltip="Quantidade de vendas que geraram comissões para você neste período. Mais vendas significam maiores ganhos."
+        />
       </div>
     </div>
   );

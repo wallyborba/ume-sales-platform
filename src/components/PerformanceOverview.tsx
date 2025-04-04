@@ -34,8 +34,8 @@ const PerformanceOverview = ({ clientCount, earnings }: PerformanceOverviewProps
                     <Info size={18} />
                   </button>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p>Total number of clients in your portfolio</p>
+                <TooltipContent className="bg-white p-2 max-w-xs">
+                  <p>Este é o número total de clientes em sua carteira. Quanto mais clientes ativos, maiores suas oportunidades de ganhos.</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -55,8 +55,8 @@ const PerformanceOverview = ({ clientCount, earnings }: PerformanceOverviewProps
                     <Info size={18} />
                   </button>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p>Your monthly earnings from all clients</p>
+                <TooltipContent className="bg-white p-2 max-w-xs">
+                  <p>Este valor representa suas comissões mensais baseadas nas vendas realizadas para clientes da sua carteira. Acompanhe este indicador para medir seu desempenho.</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
