@@ -7,6 +7,9 @@ import {
   DialogTitle,
   DialogDescription
 } from "@/components/ui/dialog";
+import { 
+  ScrollArea 
+} from "@/components/ui/scroll-area";
 import { useState } from "react";
 
 interface LevelProgressCardProps {
@@ -18,6 +21,24 @@ interface LevelProgressCardProps {
 
 const LevelProgressCard = ({ level, levelName, progress, nextLevel }: LevelProgressCardProps) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  
+  // Translate level name to Brazilian Portuguese
+  const translateLevelName = (name: string): string => {
+    const translations: Record<string, string> = {
+      "Engaged Seller": "Vendedor Engajado",
+      "Beginner": "Iniciante",
+      "Junior Seller": "Vendedor Júnior",
+      "Experienced Seller": "Vendedor Experiente",
+      "Senior Seller": "Vendedor Sênior",
+      "Expert": "Especialista",
+      "Master Seller": "Vendedor Mestre",
+      "Elite Seller": "Vendedor Elite",
+      "Diamond Seller": "Vendedor Diamante",
+      "Legendary Seller": "Vendedor Lendário"
+    };
+    
+    return translations[name] || name;
+  };
 
   return (
     <>
@@ -61,34 +82,36 @@ const LevelProgressCard = ({ level, levelName, progress, nextLevel }: LevelProgr
             </DialogDescription>
           </DialogHeader>
           
-          <div className="space-y-4 py-3">
-            <div className="space-y-2">
-              <h3 className="font-semibold">Como os níveis funcionam:</h3>
-              <p className="text-sm text-gray-600">
-                Cada nível representa sua experiência e dedicação como vendedor. 
-                À medida que você adquire mais clientes e aumenta suas vendas, 
-                seu progresso avança para o próximo nível.
-              </p>
-            </div>
+          <ScrollArea className="h-[60vh] pr-4">
+            <div className="space-y-4 py-3">
+              <div className="space-y-2">
+                <h3 className="font-semibold">Como os níveis funcionam:</h3>
+                <p className="text-sm text-gray-600">
+                  Cada nível representa sua experiência e dedicação como vendedor. 
+                  À medida que você adquire mais clientes e aumenta suas vendas, 
+                  seu progresso avança para o próximo nível.
+                </p>
+              </div>
 
-            <div className="space-y-2">
-              <h3 className="font-semibold">Benefícios de subir de nível:</h3>
-              <ul className="text-sm text-gray-600 space-y-1 list-disc pl-5">
-                <li>Acesso a produtos exclusivos</li>
-                <li>Maiores porcentagens de comissão</li>
-                <li>Prioridade no suporte ao vendedor</li>
-                <li>Reconhecimento na comunidade</li>
-              </ul>
-            </div>
+              <div className="space-y-2">
+                <h3 className="font-semibold">Benefícios de subir de nível:</h3>
+                <ul className="text-sm text-gray-600 space-y-1 list-disc pl-5">
+                  <li>Acesso a produtos exclusivos</li>
+                  <li>Maiores porcentagens de comissão</li>
+                  <li>Prioridade no suporte ao vendedor</li>
+                  <li>Reconhecimento na comunidade</li>
+                </ul>
+              </div>
 
-            <div className="space-y-2">
-              <h3 className="font-semibold">Seu nível atual: {level} ({levelName})</h3>
-              <p className="text-sm text-gray-600">
-                Você está {progress}% do caminho para o Nível {nextLevel}.
-                Continue adicionando clientes e aumentando suas vendas para progredir!
-              </p>
+              <div className="space-y-2">
+                <h3 className="font-semibold">Seu nível atual: {level} ({translateLevelName(levelName)})</h3>
+                <p className="text-sm text-gray-600">
+                  Você está {progress}% do caminho para o Nível {nextLevel}.
+                  Continue adicionando clientes e aumentando suas vendas para progredir!
+                </p>
+              </div>
             </div>
-          </div>
+          </ScrollArea>
         </DialogContent>
       </Dialog>
     </>
