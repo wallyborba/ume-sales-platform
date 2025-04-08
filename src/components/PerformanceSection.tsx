@@ -22,10 +22,47 @@ const mockData = {
 
 const PerformanceSection = () => {
   const [selectedPeriod, setSelectedPeriod] = useState<Period>('today');
-  const currentDate = new Date().toLocaleDateString('pt-BR');
   
   // Get the current data based on selected period
   const currentData = mockData[selectedPeriod];
+  
+  // Date formatting logic based on selected period
+  const getFormattedDateText = () => {
+    const today = new Date();
+    const dayOfWeek = today.getDay(); // 0 = Sunday, 1 = Monday, ...
+    
+    if (selectedPeriod === 'today') {
+      return today.toLocaleDateString('pt-BR');
+    } else if (selectedPeriod === 'week') {
+      // Calculate the start of this week (Monday)
+      const startOfThisWeek = new Date(today);
+      const daysFromMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // Adjust for Sunday
+      startOfThisWeek.setDate(today.getDate() - daysFromMonday);
+      
+      // Calculate the end of last week (Sunday)
+      const endOfLastWeek = new Date(startOfThisWeek);
+      endOfLastWeek.setDate(startOfThisWeek.getDate() - 1);
+      
+      // Calculate the start of last week (Monday)
+      const startOfLastWeek = new Date(endOfLastWeek);
+      startOfLastWeek.setDate(endOfLastWeek.getDate() - 6);
+      
+      // Format dates as dd/mm
+      const formatDate = (date: Date) => {
+        const day = date.getDate().toString().padStart(2, '0');
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        return `${day}/${month}`;
+      };
+      
+      return `${formatDate(startOfThisWeek)} (esta semana) - ${formatDate(startOfLastWeek)} (semana passada)`;
+    } else if (selectedPeriod === 'month') {
+      // Show current month and year
+      const options = { month: 'long', year: 'numeric' } as const;
+      return today.toLocaleDateString('pt-BR', options);
+    }
+    
+    return today.toLocaleDateString('pt-BR');
+  };
   
   return (
     <div>
@@ -64,7 +101,7 @@ const PerformanceSection = () => {
         </button>
       </div>
       
-      <div className="text-sm text-gray-600 mb-4">{currentDate}</div>
+      <div className="text-sm text-gray-600 mb-4">{getFormattedDateText()}</div>
       
       <div className="flex gap-4">
         <MetricCard 
