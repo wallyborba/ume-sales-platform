@@ -56,7 +56,7 @@ const PerformanceSection = () => {
       
       return `${formatDate(startOfThisWeek)} (esta semana) - ${formatDate(startOfLastWeek)} (semana passada)`;
     } else if (selectedPeriod === 'month') {
-      // Show current month and year
+      // Show current month and year in Portuguese
       const options = { month: 'long', year: 'numeric' } as const;
       return today.toLocaleDateString('pt-BR', options);
     }
