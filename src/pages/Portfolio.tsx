@@ -60,7 +60,7 @@ const Portfolio = () => {
         
         <PerformanceOverview 
           clientCount={127} 
-          earnings={18450}
+          earnings={679}
         />
         
         <RecentActivity activities={recentActivities} />
